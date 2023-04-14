@@ -4,100 +4,66 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manuel's Weather Dashboard</title>
+  <title>Mnuno Weather Dashboard</title>
   <link rel="stylesheet" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
 <body>
-    <header>
-        <h1>
-            Weather Dashboard
-        </h1>
-    </header>
-</body>
+  <header>
+    <h1>Weather Dashboard</h1>
+  </header>
 
-<main>
+  <main>
     <div>
-        <h2>Search for a City:</h2>
-          <input id='cityInput' type="text" placeholder="Enter city name" />
-          <button id="buttonSubmit">Submit</button>
-        <hr>
-        <hr>
-      <h3 id="contact">Recently Searched:</h3>
-      <ul>
-        <button class = "buttonOld">Old city 1</button>
-        <button class = "buttonOld">Old city 2 </button>
-        <button class = "buttonOld">Old city 3</button>
-      </ul>
-
-    </aside>
+      <h2>Search for a City:</h2>
+        <input id='cityInput' type="text" placeholder="Enter city name" />
+        <button id="buttonSubmit">Submit</button>
+      <hr>
+      <h3>Recently Searched:</h3>
+      <ul id="oldsearch" ></ul>
+    </div>
     <section>
       <article>
 
-        <!-- Product Cards -->
         <div id="projects" class="products">
           <section class="cardmain">
-            <h2>Toledo (6/25/2023) <img style = "width: 5%" src="https://openweathermap.org/img/wn/10d@2x.png" /> </h2> 
-            <!-- create image as a link -->
-              <ul> 
-                <li>Temp: </li>
-                <li>Wind: </li>
-                <li>Humidity: </li>
+            <h2 id="cityNow"></h2> 
+
+            <ul> 
+                <li id="tempNow"></li>
+                <li id="windNow"> </li>
+                <li id="humidityNow"></li>
               </ul>
           </section>
           <h3>5-Day Forecast:</h3> 
           <section class="card">
-            <h3>6/26/2023</h3>
-              <ul> 
-                <li><img style = "width: 30%" src="https://openweathermap.org/img/wn/10d@2x.png"></li>
-                <li>Temp: </li>
-                <li>Wind: </li>
-                <li>Humidity: </li>
-              </ul>
+            <h3 id = "card1"></h3>
           </section>
           <section class="card">
-            <h3>6/27/2023</h3>
-            <ul> 
-              <li><img style = "width: 30%" src="https://openweathermap.org/img/wn/10d@2x.png"></li>
-              <li>Temp: </li>
-              <li>Wind: </li>
-              <li>Humidity: </li>
-            </ul>
+            <h3  id = "card2"></h3>
           </section>
-          <section class="card">
-            <h3>6/28/2023</h3>
-            <ul> 
-              <li><img style = "width: 30%" src="https://openweathermap.org/img/wn/10d@2x.png"></li>
-              <li>Temp: </li>
-              <li>Wind: </li>
-              <li>Humidity: </li>
-            </ul>
+          <section class="card" >
+            <h3 id = "card3"></h3>
           </section>
-          <section class="card">
-            <h3>6/29/2023</h3>
-            <ul> 
-              <li><img style = "width: 30%" src="https://openweathermap.org/img/wn/10d@2x.png"></li>
-              <li>Temp: </li>
-              <li>Wind: </li>
-              <li>Humidity: </li>
-            </ul>
+          <section class="card" >
+            <h3 id = "card4"></h3>
           </section>
-          <section class="card">
-            <h3>6/30/2023</h3>
-            <ul> 
-              <li><img style = "width: 30%" src="https://openweathermap.org/img/wn/10d@2x.png"></li>
-              <li>Temp: </li>
-              <li>Wind: </li>
-              <li>Humidity: </li>
-            </ul>
+          <section class="card" >
+            <h3 id = "card5"></h3>
           </section>
         </div>
       </article>
     </section>
 
   </main>
-
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script
+  src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+  integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+  crossorigin="anonymous"
+></script>
+  <script src = './assets/js/script.js'></script>
 </body>
 
 </html>
